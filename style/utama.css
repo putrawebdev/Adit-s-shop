@@ -1,0 +1,87 @@
+:root {
+    --warna-primer: #3e9bff; /* Variabel untuk warna primer */
+    --warna-teks: #333333;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+.bg-utama{
+    background-color: var(--warna-primer);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('warung.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+.snack { color: #FF9800; }
+.drink { color: #2196F3; }
+.basic { color: #4CAF50; }
+.soap { color: #9C27B0; }
+.product-card {
+    transition: transform 0.3s;
+    height: 100%;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.category-btn {
+    margin: 5px;
+}
+.promo-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+}
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+}
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--warna-primer);
+}
+.bg-light-green {
+    background-color: #333;
+}
+.produk-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.link-kategori{
+    text-decoration: none;
+}
+.link-kategori:hover{
+    text-shadow:
+    1px 1px 2px black,
+    0 0 1em rgb(255, 255, 255),
+    0 0 0.2em rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.a-footer{
+    text-decoration: none;
+}
