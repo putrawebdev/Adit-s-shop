@@ -1,5 +1,5 @@
 :root {
-    --warna-primer: #3e9bff; /* Variabel untuk warna primer */
+    --warna-primer: #3e9bff;
     --warna-teks: #333333;
 }
 body {
@@ -27,6 +27,7 @@ body {
 .product-card {
     transition: transform 0.3s;
     height: 100%;
+    margin-bottom: 20px;
 }
 .product-card:hover {
     transform: translateY(-5px);
@@ -44,13 +45,14 @@ body {
 .section-title {
     position: relative;
     padding-bottom: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .section-title:after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 60px;
     height: 3px;
     background-color: var(--warna-primer);
@@ -60,8 +62,8 @@ body {
 }
 .produk-div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     padding-bottom: 50px;
 }
 
@@ -84,4 +86,56 @@ body {
 
 .a-footer{
     text-decoration: none;
+}
+
+/* Responsive adjustments */
+.category-icon {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .produk-div {
+        justify-content: space-around;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .category-item {
+        margin-bottom: 15px;
+    }
+    
+    .card-img-top {
+        height: 180px;
+        object-fit: contain;
+        padding: 10px;
+    }
+    
+    .card-body {
+        padding: 15px;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-icon i {
+        font-size: 1.5rem !important;
+    }
+    
+    .category-item h5 {
+        font-size: 0.9rem;
+    }
+    
+    .card-img-top {
+        height: 150px;
+    }
 }
